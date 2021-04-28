@@ -1,0 +1,61 @@
+{% extends "shopping/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+    <link href="{% static 'shopping/style.css' %}" rel="stylesheet">
+
+</head>
+    <main>
+        <section class="banner-image">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>We sell lifestyle</h1>
+                    <p>Think Different. Think Business.</p>
+                    <a href="{% url 'products' %}" class="btn btn-danger btn-lg active">Shop Now</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="padding-20"></div>
+                <div class="row">
+                    <div class="col-xs-4 text-center">
+                        <div class="thumbnail">
+                            <a href="{% url 'products' %}"><img src="{% static 'shopping/images/iphone11-64gb.png' %}" alt="iPhones"></a>
+                            <div class="caption">
+                                <h2>iPhones</h2>
+                                <p>Latest Apple iPhones with iOS 14.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <div class="thumbnail">
+                            <a href="{% url 'products' %}"><img src="{% static 'shopping/images/apple-laptop.jpg' %}" alt="Laptops"></a>
+                            <div class="caption">
+                                <h2>Laptops</h2>
+                                <p>Different range of Macbook Air.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <div class="thumbnail">
+                            <a href="{% url 'products' %}"><img src="{% static 'shopping/images/watch.jpg' %}" alt="Shirt"></a>
+                            <div class="caption">
+                                <h2>Apple Watches</h2>
+                                <p>Shop from various series of Apple Watches</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding-20"></div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

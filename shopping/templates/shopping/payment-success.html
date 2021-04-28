@@ -1,0 +1,45 @@
+{% extends "shopping/base.html" %}
+{% block content %}
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Successful</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap" rel="stylesheet">
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+
+
+  <body class="bg-blue-100">
+    <main class="h-screen flex justify-center items-center">
+      <div class="bg-white p-10 md:p-20 rounded">
+          <span class="absolute font-bold text-teal-500"></span>
+        <div class="text-center">
+          <svg
+            class="fill-current text-teal-500 inline-block h-40 w-40"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <h1 class="mt-3 text-4xl font-bold">Payment Successful </h1>
+        <div class="text-center">
+            <span >Thank you for your purchase</span>
+        </div>
+      </div>
+    </main>
+</body>
+
+{% endblock %}

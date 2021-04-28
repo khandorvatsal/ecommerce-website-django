@@ -1,0 +1,47 @@
+{% load staticfiles %}
+ 
+ 
+.banner-image{ padding-top: 75px;    
+    padding-bottom: 50px; 
+    text-align: center;     
+    color: #f8f8f8; 
+    background: url("/static/shopping/images/home2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.banner-content{
+position:relative; 
+padding-top: 6%; 
+padding-bottom: 6%; 
+margin-top: 9%; 
+margin-bottom: 12%; 
+background-color: rgba(0, 0, 0, 0.7); 
+max-width: 660px;
+overflow: hidden;
+margin-left: 20%;
+}
+
+.thumbnail img{
+max-height: 150px; 
+}
+main {
+min-height: 100vh;
+}
+
+.row_style{margin-top: 70px;
+}
+h2{font-weight: bolder; 
+}
+.jumbotron_style{margin-top: 70px;
+}
+.table_style{margin-top: 70px;
+}
+h4{font-weight: bolder;
+}
+
+.container_style{margin-top: 80px;
+}
+
+.padding-20 {
+padding: 20px;
+}

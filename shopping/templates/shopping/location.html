@@ -1,0 +1,92 @@
+{% load static %}
+
+
+{% block content %}
+
+   <head>
+      <meta charset="utf-8" />
+      <meta
+         http-equiv="X-UA-Compatible"
+         content="IE=edge"
+      />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0"
+      />
+      <title>Contact Form</title>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="{% static 'shopping/location.css' %}"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+         rel="stylesheet"
+      />
+      <!--using-fontAwesome------------>
+      <script
+         src="https://kit.fontawesome.com/c8e4d183c2.js"
+         crossorigin="anonymous"
+      ></script>
+   </head>
+
+   
+   <body>
+      <!--contact-form-container------------------->
+      <section id="contact">
+         <!--socail----------->
+         <div class="social">
+            <!--icons--------->
+            <a href="#"
+               ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+         </div>
+         <!--contact-box------------->
+         <div class="contact-box">
+            <!--heading---------->
+            <div class="c-heading">
+               <h1>Get In Touch</h1>
+               <p>
+                  Call Or Email Us Regarding Question Or
+                  Issues
+               </p>
+            </div>
+            <!--inputs------------------>
+            <div class="c-inputs">
+               <form>
+                  <input
+                     type="text"
+                     placeholder="Full Name"
+                  />
+                  <input
+                     type="email"
+                     placeholder="Example@gmail.com"
+                  />
+                  <textarea
+                     name="message"
+                     placeholder="Write Message"
+                  ></textarea>
+                  <!--sumbit-btn----------->
+                  <button>SEND</button>
+               </form>
+            </div>
+         </div>
+         <!--map------------------->
+         <div class="map">
+            <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.7269714000477!2d6.976953613802564!3d4.816873696502095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cf46abda1f6d%3A0x12e7b523745eb22e!2sHub10!5e0!3m2!1sen!2sng!4v1601145463417!5m2!1sen!2sng"
+               width="600"
+               height="450"
+               frameborder="0"
+               style="border: 0"
+               allowfullscreen=""
+               aria-hidden="false"
+               tabindex="0"
+            ></iframe>
+         </div>
+      </section>
+   </body>
+{% endblock %}

@@ -1,0 +1,337 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'shopping/main.css' %}">
+
+    {% if title %}
+        <title>Apple Store - {{ title }}</title>
+    {% else %}
+        <title>Apple Store</title>
+    {% endif %}
+
+    <style>
+    .footer1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-title {
+  font-size: 2rem;
+}
+
+.payment-bar {
+  display: flex;
+  flex-direction: column;
+  color: #575353;
+  padding: 5px;
+}
+
+.lb {
+  padding-left: 0.5rem;
+  border-left: 2px solid #9c9494;
+}
+
+.txt {
+  padding: 3px 0px;
+}
+
+.footer2 {
+  border-top: 2px solid #8f4040;
+  margin-top: 1rem;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #575353;
+  align-items: center;
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 0.6rem;
+}
+
+.txt {
+  padding: 0.6rem 0.7rem;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.logo{
+    width: auto;
+    height: 80px;
+}
+.navlink{
+  text-decoration: none;
+  color: black;
+
+}
+
+.navlink:hover{
+  color: gray;
+}
+
+
+
+footer {
+    background-color: #000824;
+    font-family: "Quicksand";
+    padding: 85px 0 100px 0;
+    margin-top: 100px;
+  }
+  
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 120px;
+    position: relative;
+  }
+  
+  .footer-item {
+    margin: 0 7.2% 0 0;
+  }
+
+  .footer-button {
+    color: white;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 1s;
+    transition-delay: .2s;
+    padding: 14px;
+  }
+  
+  footer.h1 {
+    font-weight: 900;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  footer.h2 {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 13px;
+    color: #d1d1d1;
+    letter-spacing: 0.03em;
+    padding: 15px 0 0 0;
+  }
+  
+  .color {
+    color: white;
+    font-weight: 400;
+    font-size: 140%;
+  }
+  
+  footer.h3 {
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+    margin: 0;
+    padding-bottom: 9px;
+    letter-spacing: 0.03em;
+  }
+  
+  footer.h3.desktop {
+    padding-top: 30px;
+  }
+  
+  .footul,.foottitle {
+    line-height: 1.8;
+    list-style-type: none;
+    padding: 0;
+    color:#f02e7e;
+  }
+  
+  .footli {
+    font-weight: 300;
+    font-size: 13px;
+    color: white;
+    list-style-type: none;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+  .footli a{
+    color: white;
+}
+  footer.p {
+    font-weight: 300;
+    font-size: 13px;
+    padding: 0;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+  }
+  
+  footer.a {
+    text-decoration: none;
+    color: #d1d1d1;
+  }
+  
+  footer.a:hover {
+    color: white;
+  }
+  
+  .desktop {
+    display: auto;
+    color: white;
+  }
+  
+  .footer-inner:after {
+    content: "©️ 2020 Apple Store. All Rights Reserved.";
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    color: #d1d1d1;
+    position: absolute;
+    top: 260px;
+  }
+  
+@media screen and (max-width: 550px){
+	.header {
+		flex-direction: column;
+	}
+
+	.header h1 {
+		margin: 0 auto 3rem;
+	}
+
+	.header li {
+		margin: 0 1rem;
+	}
+}
+
+  @media (max-width: 1024px) {
+    
+  footer {
+    padding: 50px 0 60px 0 !important;
+  }
+    
+  
+  .desktop {
+    display: none;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    
+  
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+          <div class="container">
+            <a class="navbar-brand mr-4" href="{% url 'shopping-home' %}">Apple Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+              <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{% url 'shopping-home' %}">Home</a>
+              </div>
+              <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{% url 'location' %}">Contact Us</a>
+              </div>
+              
+
+              <!-- Navbar Right Side -->
+              <div class="navbar-nav">
+                {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                  <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                  <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8">
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <nav class="footer-inner">
+        <section class="footer-item">
+          <b class="color">Think Different. Think Business.</b></h2>
+        </section>
+      
+        <section class="footer-item">
+          <h3 class="foottitle">Explore</h3>
+            <ul class="footul">
+              <li class="footli">Home</li>
+              <li class="footli">About</li>
+              <li class="footli">Capabilities</li>
+              <li class="footli">Careers</li>
+            </ul>
+        </section>
+        
+        <section class="footer-item">
+          <h3 class="foottitle">Visit</h3>
+            
+            <p class="footli">B-1st floor, Gokuldham Society</p>
+            <p class="footli">Powder Galli, Goregaon(E)</p>
+            <p class="footli">Mumbai, Maharashtra, India 400069</p>
+            
+            <br />
+         
+            <p class="desktop">admin@djsanghvi.com</p>
+            <br/>
+            <p class="desktop">+91 70452 00132</p>
+        </section>
+        
+        
+      
+        <section class="footer-item">
+          <h3 class="foottitle">Follow Us</h3>
+            <ul>
+              <li class="footli"><a href="https://www.facebook.com" class="socialmedialink" ><i class="fab fa-facebook-square"></i></a> &nbsp; &nbsp; Facebook </li>
+              <li class="footli"><a href="https://www.twitter.com" class="socialmedialink" ><i class="fab fa-twitter"></i></a> &nbsp; &nbsp; Twitter</li>
+              <li class="footli"><a href="https://www.linkedin.com" class="socialmedialink" ><i class="fab fa-linkedin-in"></i></a> &nbsp; &nbsp;  LinkedIn</li>
+              
+            </ul>
+          </section>        
+      </nav>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
